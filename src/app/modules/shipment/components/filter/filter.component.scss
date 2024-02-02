@@ -1,27 +1,27 @@
+@import 'src/_variables.scss';
+
 .dropdown-menu {
-  border-radius: 0;
-  width: 400px;
+	border-radius: 0;
+	width: 400px;
 }
 
 .form-check-input {
-  border-radius: 0;
-  outline: none;
-}
-
-.reset-button,
-.apply-button {
-  padding: 6px 25px;
-  margin-left: 10px;
+	border-radius: 0;
+	outline: none;
 }
 
 .reset-button {
-  background-color: white;
-  color: #2278bf;
-  border: 1px solid #2278bf;
+	padding: 6px 25px;
+	margin-left: 10px;
+	background-color: $white-color;
+	color: $primary-color;
+	border: 1px solid $primary-color;
 }
 
 .apply-button {
-  background-color: #2278bf;
-  color: white;
-  border: none;
+	padding: 6px 25px;
+	margin-left: 10px;
+	background-color: $primary-color;
+	color: $white-color;
+	border: none;
 }

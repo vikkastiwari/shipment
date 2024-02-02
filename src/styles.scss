@@ -1,8 +1,8 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import 'src/_variables.scss';
 
-$primary-color: #2278bf;
 
 body {
   margin: 0;

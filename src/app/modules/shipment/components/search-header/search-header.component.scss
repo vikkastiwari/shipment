@@ -1,7 +1,9 @@
+@import 'src/_variables.scss';
+
 .custom-header {
     font-size: 18px;
-    border-top: 1px solid #e4e4e4;
-    border-bottom: 1px solid #e4e4e4;
+    border-top: 1px solid $border_grey;
+    border-bottom: 1px solid $border_grey;
 
     .left-section {
         .arrow {
@@ -10,10 +12,10 @@
             cursor: pointer;
             font-size: inherit;
             .fw-bold{
-                color: #616161;
+                color: $color_grey;
             }
             .vertical-line {
-                border-left: 1px solid #dfdfdf;
+                border-left: 1px solid $border_grey;
                 margin: 0 10px;
               }
         }
@@ -23,9 +25,9 @@
         .close {
             padding: 8px 35px;
             margin-left: 10px; 
-            background-color: white; 
-            color: #2278bf;
-            border: 1px solid #2278bf;
+            background-color: $white-color; 
+            color: $primary-color;
+            border: 1px solid $primary-color;
             cursor: pointer;
         }
     }

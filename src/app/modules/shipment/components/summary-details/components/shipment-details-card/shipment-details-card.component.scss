@@ -1,5 +1,7 @@
+@import 'src/_variables.scss';
+
 .summary-details.card{
     border-radius: 0;
     border: none;
-    background-color: #e0e0e0;
+    background-color: $background-color_light-2;
 }

@@ -1,8 +1,10 @@
+@import 'src/_variables.scss';
+
 .shipment-container {
     max-width: 95%;
-    box-shadow: 1px 2px 5px #1817175c;
+    box-shadow: 1px 2px 5px $shadow-color;
     margin: 14px auto;
-    background-color: #fff;
+    background-color: $white-color;
 
     .top-section {
         display: flex;

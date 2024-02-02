@@ -1,8 +1,10 @@
+@import 'src/_variables.scss';
+
 .summary-details-container {
     max-width: 95%;
     box-shadow: 1px 2px 5px #1817175c;
     margin: 14px auto;
-    background-color: #fff;    
+    background-color: $white-color;    
 }
 
 .card{
@@ -13,6 +15,6 @@
 .nav-tabs .nav-link.active {
     border-radius: 0;
     border: none;
-    color: #2278bf; 
-    border-bottom: 2px solid #2278bf; 
+    color: $primary-color; 
+    border-bottom: 2px solid  $primary-color; 
   }
