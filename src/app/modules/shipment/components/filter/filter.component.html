@@ -1,0 +1,29 @@
+<!-- app.component.html -->
+<div class="container">
+  <div ngbDropdown #filterDropdown="ngbDropdown">
+    <div class="cursor-pointer" id="dropdownBasic1" ngbDropdownToggle>
+      <i class="fas fa-filter fa-lg primary-color"></i> 
+      <i *ngIf="selectedFiltersList.length" class="fas fa-check"></i>
+    </div>
+    <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <div class="p-2 border-bottom border-1">{{const.LABEL_Refine}}</div>
+      <div class="p-4 border-bottom">
+        <div class="p-1 ">{{const.LABEL_Status}}</div>
+        <ng-container *ngFor="let option of filterOptions">
+          <div >
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" [(ngModel)]="option.checked" id="{{ option.id }}">
+              <label class="form-check-label" for="{{ option.id }}">
+                {{ option.label }}
+              </label>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="button-container d-flex justify-content-end p-3">
+        <button class="reset-button cursor-pointer" (click)="resetFilters()">{{const.LABEL_Reset}}</button>
+        <button class="apply-button cursor-pointer" (click)="applyFilters()">{{const.LABEL_Apply}}</button>
+      </div>
+    </div>
+  </div>
+</div>

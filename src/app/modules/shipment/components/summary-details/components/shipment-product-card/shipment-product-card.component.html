@@ -1,0 +1,12 @@
+<div class="shipment-product-card-container d-flex align-items-center m-2">
+    <div>
+        <img src={{shipmentProductDetail.OrderLine.ItemDetails.ImageUrl}} alt="Product Image" class="img-fluid">
+    </div>
+    <div>
+        <div class="card-body">
+            <h6 class="card-title primary-color mb-0">{{shipmentProductDetail.OrderLine.ItemDetails.Description}}</h6>
+            <div class="card-text">Product id: {{shipmentProductDetail.OrderLine.ItemDetails.ItemID}}</div>
+            <div class="card-text">Quantity: {{shipmentProductDetail.Quantity}}</div>
+        </div>
+    </div>
+</div>

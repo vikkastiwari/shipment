@@ -1,0 +1,27 @@
+.dropdown-menu {
+  border-radius: 0;
+  width: 400px;
+}
+
+.form-check-input {
+  border-radius: 0;
+  outline: none;
+}
+
+.reset-button,
+.apply-button {
+  padding: 6px 25px;
+  margin-left: 10px;
+}
+
+.reset-button {
+  background-color: white;
+  color: #2278bf;
+  border: 1px solid #2278bf;
+}
+
+.apply-button {
+  background-color: #2278bf;
+  color: white;
+  border: none;
+}

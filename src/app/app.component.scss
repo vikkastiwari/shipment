@@ -1,0 +1,21 @@
+.app-header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.left-text,
+.right-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}

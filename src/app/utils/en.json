@@ -1,0 +1,29 @@
+{
+  "header":{
+    "LABEL_IBMStoreEngagement":"IBM Store Engagement",
+    "LABEL_StoreAssociate":"Store Associate"
+  },
+  "home": {
+    "LABEL_WhatDoYouWantToDO": "What do you want to do?",
+    "LABEL_ShipmentSearch": "Shipment Search",
+    "LABEL_Reset":"Reset",
+    "LABEL_Search":"Search"
+  },
+  "shipment":{
+    "LABEL_ShipmentSearchResults":"Shipment search results",
+    "LABEL_ShipmentSummary":"Shipment Summary",
+    "LABEL_Close":"Close",
+    "LABEL_Result":"Result",
+    "LABEL_Reset":"Reset",
+    "LABEL_Refine":"Refine",
+    "LABEL_Apply":"Apply",
+    "LABEL_Status":"Status",
+    "LABEL_Products":"Products",
+    "LABEL_Careers":"Careers: ",
+    "LABEL_Shipment":"Shipment # ",
+    "LABEL_AssignedTo":"Assigned to: ",
+    "LABEL_ExpectedPickupDate":"Expected Pickup date: ",
+    "LABEL_ExpectedShipDate":"Expected Ship date: ",
+    "LABEL_CustomerInfo":"Customer info"
+  }
+}

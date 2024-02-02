@@ -1,0 +1,27 @@
+.shipment-container {
+    max-width: 95%;
+    box-shadow: 1px 2px 5px #1817175c;
+    margin: 14px auto;
+    background-color: #fff;
+
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        .left-aligned,
+        .right-aligned {
+            font-size: 14px;
+        }
+
+        .left-aligned{
+            .results{
+                font-size: 18px;
+            }
+        }
+    }
+    .component-list {
+        margin-top: 20px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,33 @@
+<div class="summary-details-container">
+    <app-search-header [isSummary]="true" [const]="const"></app-search-header>
+    <app-shipment-details-card [shipmentDetails]="shipmentDetails"></app-shipment-details-card>
+    <div class="product-wrapper">
+        <div class="m-2">
+            <ul class="nav nav-tabs" id="myTabs">
+              <li class="nav-item">
+                <a class="nav-link primary-color fw-bold active" id="tab1" data-bs-toggle="tab">
+                    Products ({{shipmentDetails.Shipment.ShipmentLines.TotalNumberOfRecords}})
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content mt-3">
+              <div class="tab-pane fade show active" id="content1">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ng-container *ngFor="let shipmentProductDetail of shipmentDetails.Shipment.ShipmentLines.ShipmentLine; let i = index">
+                                <div [ngClass]="!(i+1 === shipmentDetails.Shipment.ShipmentLines.ShipmentLine.length) ? 'border-bottom' : ''">
+                                    <app-shipment-product-card [shipmentProductDetail]="shipmentProductDetail"></app-shipment-product-card>
+                                </div>
+                            </ng-container>
+                        </div>
+                        <div class="col-md-6">
+                            <app-shipment-product-card [shipmentProductDetail]="shipmentDetails.Shipment.ShipmentLines.ShipmentLine[0]"></app-shipment-product-card>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

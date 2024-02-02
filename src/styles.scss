@@ -1,0 +1,29 @@
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+$primary-color: #2278bf;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5!important;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.primary-color{
+  color: $primary-color;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+

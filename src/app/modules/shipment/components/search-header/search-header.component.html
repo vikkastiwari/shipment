@@ -1,0 +1,16 @@
+<div class="custom-header d-flex justify-content-between align-items-center p-2">
+    <div class="left-section  d-flex align-items-center">
+      <button class="arrow" (click)="onBack()"> 
+        <i class="fas fa-less-than primary-color"></i>
+        <span class="vertical-line"></span>
+    </button>
+    <div *ngIf="!isSummary" class="fw-bold">{{const.LABEL_ShipmentSearchResults}}</div>
+    <div *ngIf="isSummary">
+        <div class="fw-bold">{{const.LABEL_ShipmentSummary}}</div>
+        <div class="text-secondary">SFS1000002</div>
+    </div>
+    </div>
+    <div class="right-section">
+      <button class="close" (click)="onClose()">{{const.LABEL_Close}}</button>
+    </div>
+  </div>
