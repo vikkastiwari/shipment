@@ -7,7 +7,7 @@
             <app-filter [const]="const" (selectedFilters)="onApplyFilter($event)"></app-filter>
           </div>
       </div>
-      <ng-container *ngFor="let shipmentDetail of searchResults | filterStatus:selectedFilters">
+      <ng-container *ngFor="let shipmentDetail of searchResults | filterStatus:selectedFilters | slice:0:visibleItemCount">
         <app-result-card [const]="const" [cardDetails]="shipmentDetail"></app-result-card>
       </ng-container>
     </div>

@@ -18,6 +18,7 @@ export class ShipmentComponent implements OnInit {
   searchResults: Shipment[] = []; 
   selectedFilters!:Filter[];
   const = Const.shipment;
+  visibleItemCount:number = 10; 
   searchForm!: FormGroup;
   shipmentData = ShipmentData;
 
@@ -58,13 +59,11 @@ export class ShipmentComponent implements OnInit {
     this.selectedFilters = event;
   }
 
-  // Infinite Scroll
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event): void {
-    if (this.isScrolledToBottom()) {
-      this.loadShipments();
-      console.log("bottom reached");
+  // Custom Infinite Scroll Implementation
+  private loadMoreItems() {
+    if(this.visibleItemCount < this.searchResults.length){
+      this.visibleItemCount += 10;
+      console.log(this.visibleItemCount);
     }
   }
 
@@ -74,10 +73,10 @@ export class ShipmentComponent implements OnInit {
     return scrollPosition >= documentHeight;
   }
 
-  shipments:any[] = [];
-  private loadShipments(): void {
-    const newShipments = Array.from({ length: 10 }, (_, index) => `Shipment ${this.shipments.length + index + 1}`);
-    this.shipments = [...this.shipments, ...newShipments];
-    console.log(this.shipments);
+  @HostListener('window:scroll', ['$event'])
+  private onScroll(event: Event): void {
+    if (this.isScrolledToBottom()) {
+      this.loadMoreItems();
+    }
   }
 }
