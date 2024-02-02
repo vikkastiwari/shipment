@@ -6,9 +6,9 @@
       <i *ngIf="selectedFiltersList.length" class="fas fa-check"></i>
     </div>
     <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownBasic1">
-      <div class="p-2 border-bottom border-1">{{const.LABEL_Refine}}</div>
+      <div class="p-2 border-bottom border-1">{{const.LABEL_Refine | translate}}</div>
       <div class="p-4 border-bottom">
-        <div class="p-1 ">{{const.LABEL_Status}}</div>
+        <div class="p-1 ">{{const.LABEL_Status | translate}}</div>
         <ng-container *ngFor="let option of filterOptions">
           <div >
             <div class="form-check mb-2">
@@ -21,8 +21,8 @@
         </ng-container>
       </div>
       <div class="button-container d-flex justify-content-end p-3">
-        <button class="reset-button cursor-pointer" (click)="resetFilters()">{{const.LABEL_Reset}}</button>
-        <button class="apply-button cursor-pointer" (click)="applyFilters()">{{const.LABEL_Apply}}</button>
+        <button class="reset-button cursor-pointer" (click)="resetFilters()">{{const.LABEL_Reset | translate}}</button>
+        <button class="apply-button cursor-pointer" (click)="applyFilters()">{{const.LABEL_Apply | translate}}</button>
       </div>
     </div>
   </div>

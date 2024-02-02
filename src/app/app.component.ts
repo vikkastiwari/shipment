@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
-import Const from './utils/en.json';
-
+import Const from 'src/assets/i18n/en.json';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +11,10 @@ import Const from './utils/en.json';
 export class AppComponent {
   title = 'ibm-shippent-search';
   const = Const.header;
+
+  constructor(private translate: TranslateService){
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
+
 }

@@ -2,7 +2,7 @@
     <app-search-header [isSummary]="false" [const]="const"></app-search-header>
     <div class="component-list">
       <div class="top-section d-flex align-items-center border-bottom p-1">
-          <div class="left-aligned"> <span class="results">{{searchResults.length}}</span> {{const.LABEL_Result}}</div>
+          <div class="left-aligned"> <span class="results">{{searchResults.length}}</span> {{const.LABEL_Result | translate}}</div>
           <div class="right-aligned">
             <app-filter [const]="const" (selectedFilters)="onApplyFilter($event)"></app-filter>
           </div>

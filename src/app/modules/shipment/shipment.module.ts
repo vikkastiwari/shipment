@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ShipmentComponent } from './shipment.component';
 import { ShipmentRoutingModule } from './shipment-routing.module';
@@ -7,7 +9,6 @@ import { ResultCardComponent } from './components/result-card/result-card.compon
 import { SummaryDetailsComponent } from './components/summary-details/summary-details.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterStatusPipe } from 'src/app/pipes/filter-status.pipe';
 import { SearchHeaderComponent } from './components/search-header/search-header.component';
 import { ShipmentDetailsCardComponent } from './components/summary-details/components/shipment-details-card/shipment-details-card.component';
@@ -29,7 +30,8 @@ import { ShipmentProductCardComponent } from './components/summary-details/compo
     ShipmentRoutingModule,
     NgbDropdownModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule.forChild(),
   ]
 })
 export class ShipmentModule { }

@@ -4,18 +4,18 @@
         <div class="row">
           <div class="col-sm-6 col-md-4">
             <div class="card-text">{{cardDetails.OrderNo}}</div>
-            <div class="card-text">{{cardDetails.ShipmentLines.TotalNumberOfRecords}} {{const.LABEL_Products}}</div>
-            <div class="card-text" *ngIf="cardDetails.DeliveryMethod === const.LABEL_DeliveryMethodShip">{{const.LABEL_Careers}} {{cardDetails.ScacAndService}}</div>
+            <div class="card-text">{{cardDetails.ShipmentLines.TotalNumberOfRecords}} {{const.LABEL_Products | translate}}</div>
+            <div class="card-text" *ngIf="cardDetails.DeliveryMethod === const.LABEL_DeliveryMethodShip">{{const.LABEL_Careers | translate}} {{cardDetails.ScacAndService}}</div>
             <div class="card-text">{{const.LABEL_Shipment}}<a [routerLink]="'/shipment/'+cardDetails.OrderNo" class="primary-color">{{cardDetails.ShipmentNo}}</a></div>
           </div>
           <div class="col-sm-6 col-md-4">
             <div class="card-text">{{cardDetails.Status}}</div>
             <div class="card-text">{{const.LABEL_AssignedTo}} {{cardDetails.AssignedToUserId}}</div>
-            <div class="card-text" *ngIf="cardDetails.DeliveryMethod === const.LABEL_DeliveryMethodPick">{{const.LABEL_ExpectedPickupDate}} {{cardDetails.ExpectedShipmentDate}}</div>
-            <div class="card-text" *ngIf="cardDetails.DeliveryMethod === const.LABEL_DeliveryMethodShip">{{const.LABEL_ExpectedShipDate}} {{cardDetails.ExpectedShipmentDate}}</div>
+            <div class="card-text" *ngIf="cardDetails.DeliveryMethod === const.LABEL_DeliveryMethodPick">{{const.LABEL_ExpectedPickupDate | translate}} {{cardDetails.ExpectedShipmentDate}}</div>
+            <div class="card-text" *ngIf="cardDetails.DeliveryMethod === const.LABEL_DeliveryMethodShip">{{const.LABEL_ExpectedShipDate | translate}} {{cardDetails.ExpectedShipmentDate}}</div>
           </div>
           <div class="col-md-4">
-            <div class="card-text">{{const.LABEL_CustomerInfo}}</div>
+            <div class="card-text">{{const.LABEL_CustomerInfo | translate}}</div>
             <div class="card-text">{{cardDetails.BillToAddress.FirstName}} {{cardDetails.BillToAddress.LastName}}</div>
             <div class="card-text">{{cardDetails.BillToAddress.DayPhone}}</div>
             <div class="card-text">{{cardDetails.BillToAddress.EMailID}}</div>

@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common'
 import { FormGroup } from '@angular/forms';
 
-import Const from 'src/app/utils/en.json';
+import Const from 'src/assets/i18n/en.json';
 import ShipmentData from 'src/assets/shippement-list.json';
 import { Filter, Shipment } from 'src/app/modules/shipment/models/shipment-model';
 import { SearchFormModel } from 'src/app/modules/home/models/home-model';

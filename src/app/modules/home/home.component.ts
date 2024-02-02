@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import Const from '../../utils/en.json';
+import Const from 'src/assets/i18n/en.json';
 
 @Component({
   selector: 'app-home',

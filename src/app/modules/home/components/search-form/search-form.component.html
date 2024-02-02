@@ -1,6 +1,6 @@
 <div class="search-form-container container">
     <form class="form-container" [formGroup]="searchForm">
-      <h1 class="form-title">{{const.LABEL_ShipmentSearch}}</h1>
+      <h1 class="form-title">{{const.LABEL_ShipmentSearch | translate}}</h1>
       <div class="form-group">
         <input type="text" id="order" placeholder="Order #" formControlName="order" />
       </div>
@@ -20,8 +20,8 @@
         <input type="tel" id="phone number" placeholder="Phone number" formControlName="phoneNumber" />
       </div>
       <div class="button-container d-flex justify-content-end">
-        <button class="reset-button cursor-pointer" (click)="onReset()">{{const.LABEL_Reset}}</button>
-        <button class="search-button cursor-pointer" type="button" (click)="onSearch()">{{const.LABEL_Search}}</button>
+        <button class="reset-button cursor-pointer" (click)="onReset()">{{const.LABEL_Reset | translate}}</button>
+        <button class="search-button cursor-pointer" type="button" (click)="onSearch()">{{const.LABEL_Search | translate}}</button>
       </div>
     </form>
   </div>

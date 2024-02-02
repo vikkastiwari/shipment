@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import Const from 'src/app/utils/en.json';
+import Const from 'src/assets/i18n/en.json';
 import ShipmentDetails from 'src/assets/shipment-details.json';
 
 @Component({

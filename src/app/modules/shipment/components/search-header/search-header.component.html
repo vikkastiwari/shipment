@@ -4,13 +4,13 @@
         <i class="fas fa-less-than primary-color"></i>
         <span class="vertical-line"></span>
     </button>
-    <div *ngIf="!isSummary" class="fw-bold">{{const.LABEL_ShipmentSearchResults}}</div>
+    <div *ngIf="!isSummary" class="fw-bold">{{const.LABEL_ShipmentSearchResults | translate}}</div>
     <div *ngIf="isSummary">
-        <div class="fw-bold">{{const.LABEL_ShipmentSummary}}</div>
+        <div class="fw-bold">{{const.LABEL_ShipmentSummary | translate}}</div>
         <div class="text-secondary">SFS1000002</div>
     </div>
     </div>
     <div class="right-section">
-      <button class="close" (click)="onClose()">{{const.LABEL_Close}}</button>
+      <button class="close" (click)="onClose()">{{const.LABEL_Close | translate}}</button>
     </div>
   </div>

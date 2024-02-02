@@ -1,33 +1,33 @@
 <div class="summary-details card border-0 m-2 card-no-radius">
     <div class="card-body">
-        <div class="card-text primary-color">{{const.shipmentDetails.LABEL_PackingInProgress}}</div>
+        <div class="card-text primary-color">{{const.shipmentDetails.LABEL_PackingInProgress | translate}}</div>
         <div class="row" *ngIf="!showMoreInfo">
             <div class="col-sm-6 col-md-4 mt-2">
-                <div class="card-text">{{const.shipmentDetails.LABEL_ShipmentNumber}}</div>
+                <div class="card-text">{{const.shipmentDetails.LABEL_ShipmentNumber | translate}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.ShipmentNo}}</div>
             </div>
             <div class="col-sm-6 col-md-4 mt-2">
-                <div class="card-text" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodShip">{{const.LABEL_ExpectedShipDate}}</div>
-                <div class="card-text" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodPick">{{const.LABEL_ExpectedPickupDate}}</div>
+                <div class="card-text" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodShip">{{const.LABEL_ExpectedShipDate | translate}}</div>
+                <div class="card-text" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodPick">{{const.LABEL_ExpectedPickupDate | translate}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.ExpectedShipmentDate}}</div>
             </div>
             <div class="col-md-4 mt-2">
-                <div class="card-text">{{const.shipmentDetails.LABEL_ShipTo}}</div>
+                <div class="card-text">{{const.shipmentDetails.LABEL_ShipTo | translate}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.ToAddress.City}}, {{shipmentDetails.Shipment.ToAddress.State}}, {{shipmentDetails.Shipment.ToAddress.ZipCode}}</div>
             </div>
         </div>
         <div class="row" *ngIf="showMoreInfo">
             <div class="col-sm-6">
-                <div class="card-text mt-2">{{const.shipmentDetails.LABEL_ShipmentNumber}}</div>
+                <div class="card-text mt-2">{{const.shipmentDetails.LABEL_ShipmentNumber | translate}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.ShipmentNo}}</div>
 
                 <div class="card-text mt-2" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodShip">Carrier</div>
                 <div class="card-text" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodShip">{{shipmentDetails.Shipment.ScacAndService}}</div>
 
-                <div class="card-text mt-2">{{const.LABEL_AssignedTo}}</div>
+                <div class="card-text mt-2">{{const.LABEL_AssignedTo | translate}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.AssignedToUserId}}</div>
 
-                <div class="card-text mt-2">{{const.shipmentDetails.LABEL_ShipTo}}</div>
+                <div class="card-text mt-2">{{const.shipmentDetails.LABEL_ShipTo | translate}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.ToAddress.FirstName}} {{shipmentDetails.Shipment.BillToAddress.LastName}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.ToAddress.AddressLine1.split(',')[0]}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.ToAddress.AddressLine1.split(',')[1]}}</div>
@@ -35,8 +35,8 @@
                 <div class="card-text">{{shipmentDetails.Shipment.ToAddress.Country}}</div>
             </div>
             <div class="col-sm-6">
-                <div class="card-text" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodShip">{{const.LABEL_ExpectedShipDate}}</div>
-                <div class="card-text" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodPick">{{const.LABEL_ExpectedPickupDate}}</div>
+                <div class="card-text" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodShip">{{const.LABEL_ExpectedShipDate | translate}}</div>
+                <div class="card-text" *ngIf="shipmentDetails.Shipment.DeliveryMethod === const.LABEL_DeliveryMethodPick">{{const.LABEL_ExpectedPickupDate | translate}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.ExpectedShipmentDate}}</div>
 
                 <div class="card-text mt-2">{{const.LABEL_CustomerInfo}}</div>
@@ -44,7 +44,7 @@
                 <div class="card-text">{{shipmentDetails.Shipment.BillToAddress.Phonenumber}} </div>
                 <div class="card-text">{{shipmentDetails.Shipment.BillToAddress.EmailID}} </div>
 
-                <div class="card-text mt-2">{{const.shipmentDetails.LABEL_BillTo}}</div>
+                <div class="card-text mt-2">{{const.shipmentDetails.LABEL_BillTo | translate}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.BillToAddress.FirstName}} {{shipmentDetails.Shipment.BillToAddress.LastName}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.BillToAddress.AddressLine1.split(',')[0]}}</div>
                 <div class="card-text">{{shipmentDetails.Shipment.BillToAddress.AddressLine1.split(',')[1]}}</div>
@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="mt-2 d-flex justify-content-end fw-bold primary-color cursor-pointer" (click)="toggleInfo()">
-            {{ showMoreInfo ? const.shipmentDetails.LABEL_HideInfo : const.shipmentDetails.LABEL_ShowInfo }}
+            {{ showMoreInfo ? (const.shipmentDetails.LABEL_HideInfo | translate) : (const.shipmentDetails.LABEL_ShowInfo | translate) }}
         </div>
     </div>
 </div>
