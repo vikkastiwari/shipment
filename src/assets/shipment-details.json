@@ -37,7 +37,7 @@
       "PersonInfoKey": "100001"
     },
     "ShipmentLines": {
-      "TotalNumberOfRecords": "2",
+      "TotalNumberOfRecords": "3",
       "ShipmentLine": [
         {
           "Quantity": "2",

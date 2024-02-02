@@ -10,6 +10,8 @@
     "LABEL_Search":"Search"
   },
   "shipment":{
+    "LABEL_DeliveryMethodShip":"SHP",
+    "LABEL_DeliveryMethodPick":"PICK",
     "LABEL_ShipmentSearchResults":"Shipment search results",
     "LABEL_ShipmentSummary":"Shipment Summary",
     "LABEL_Close":"Close",
@@ -24,6 +26,14 @@
     "LABEL_AssignedTo":"Assigned to: ",
     "LABEL_ExpectedPickupDate":"Expected Pickup date: ",
     "LABEL_ExpectedShipDate":"Expected Ship date: ",
-    "LABEL_CustomerInfo":"Customer info"
+    "LABEL_CustomerInfo":"Customer info",
+    "shipmentDetails":{
+      "LABEL_PackingInProgress":"Packing in Progress",
+      "LABEL_ShipmentNumber":"Shipment number",
+      "LABEL_ShipTo":"Ship to",
+      "LABEL_BillTo":"Bill to",
+      "LABEL_HideInfo":"Hide info",
+      "LABEL_ShowInfo":"Show info"
+    }
   }
 }

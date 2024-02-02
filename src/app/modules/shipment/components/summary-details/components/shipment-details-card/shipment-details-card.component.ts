@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ShipmentDetailsCardComponent implements OnInit {
   
   @Input() shipmentDetails!:any;
+  @Input() const!:any;
   showMoreInfo:boolean = false;
   
   constructor() { }
