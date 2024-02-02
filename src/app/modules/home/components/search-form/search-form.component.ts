@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { SearchFormModel } from 'src/app/modules/home/models/home-model';
+
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',

@@ -18,10 +18,4 @@ export class SummaryDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  showMoreInfo = false;
-
-  toggleInfo() {
-    this.showMoreInfo = !this.showMoreInfo;
-  }
 }

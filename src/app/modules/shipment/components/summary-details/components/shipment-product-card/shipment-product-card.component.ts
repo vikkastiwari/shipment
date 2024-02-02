@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ShipmentProductCard } from 'src/app/modules/shipment/models/shipment-model';
 
 @Component({
   selector: 'app-shipment-product-card',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ShipmentProductCardComponent implements OnInit {
 
-  @Input() shipmentProductDetail:any;
+  @Input() shipmentProductDetail!:ShipmentProductCard;
   @Input() const:any;
 
   constructor() { }

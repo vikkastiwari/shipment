@@ -5,6 +5,8 @@ import { FormGroup } from '@angular/forms';
 
 import Const from 'src/app/utils/en.json';
 import ShipmentData from 'src/assets/shippement-list.json';
+import { Filter, Shipment } from 'src/app/modules/shipment/models/shipment-model';
+import { SearchFormModel } from 'src/app/modules/home/models/home-model';
 
 @Component({
   selector: 'app-shippment',
@@ -13,8 +15,8 @@ import ShipmentData from 'src/assets/shippement-list.json';
 })
 export class ShipmentComponent implements OnInit {
 
-  searchResults: any[] = []; 
-  selectedFilters!:any;
+  searchResults: Shipment[] = []; 
+  selectedFilters!:Filter[];
   const = Const.shipment;
   searchForm!: FormGroup;
   shipmentData = ShipmentData;
@@ -27,7 +29,7 @@ export class ShipmentComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      this.searchResults = this.filterResults(params);
+      this.searchResults = this.filterResults(params as SearchFormModel);
     });
   }
 
@@ -39,20 +41,20 @@ export class ShipmentComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  private filterResults(searchTerms: any): any[] {
+  private filterResults(filterValues: SearchFormModel): Shipment[] {
     return this.shipmentData.Shipments.Shipment.filter((item) => {
       return (
-        (!searchTerms.order || item.OrderNo.toLowerCase() === searchTerms.order.toLowerCase()) &&
-        (!searchTerms.shipment || item.ShipmentNo.toLowerCase() === searchTerms.shipment.toLowerCase()) &&
-        (!searchTerms.firstName || item.BillToAddress.FirstName.toLowerCase() === searchTerms.firstName.toLowerCase()) &&
-        (!searchTerms.lastName || item.BillToAddress.LastName.toLowerCase() === searchTerms.lastName.toLowerCase()) &&
-        (!searchTerms.email || item.BillToAddress.EMailID.toLowerCase() === searchTerms.email.toLowerCase()) &&
-        (!searchTerms.phoneNumber || item.BillToAddress.DayPhone.toLowerCase() === searchTerms.phoneNumber.toLowerCase())
+        (!filterValues.order || item.OrderNo.toLowerCase() === filterValues.order.toLowerCase()) &&
+        (!filterValues.shipment || item.ShipmentNo.toLowerCase() === filterValues.shipment.toLowerCase()) &&
+        (!filterValues.firstName || item.BillToAddress.FirstName.toLowerCase() === filterValues.firstName.toLowerCase()) &&
+        (!filterValues.lastName || item.BillToAddress.LastName.toLowerCase() === filterValues.lastName.toLowerCase()) &&
+        (!filterValues.email || item.BillToAddress.EMailID.toLowerCase() === filterValues.email.toLowerCase()) &&
+        (!filterValues.phoneNumber || item.BillToAddress.DayPhone.toLowerCase() === filterValues.phoneNumber.toLowerCase())
       )
     });
   }
 
-  onApplyFilter(event:any){
+  onApplyFilter(event:Filter[]){
     this.selectedFilters = event;
   }
 

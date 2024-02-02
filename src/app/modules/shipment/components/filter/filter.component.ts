@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
+import { Filter } from 'src/app/modules/shipment/models/shipment-model';
+
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
@@ -7,9 +9,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class FilterComponent implements OnInit {
 
-  selectedFiltersList:any = [];
+  selectedFiltersList:Filter[] = [];
   @Input() const!:any;
-  @Output() selectedFilters = new EventEmitter<any[]>();
+  @Output() selectedFilters = new EventEmitter<Filter[]>();
 
   filterOptions = [
     { id: 'Ready for Backroom Pick', label: 'Ready for Backroom Pick', checked: false },

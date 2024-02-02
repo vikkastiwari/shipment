@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Shipment } from 'src/app/modules/shipment/models/shipment-model';
 
 @Component({
   selector: 'app-result-card',
@@ -7,12 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ResultCardComponent implements OnInit {
 
-  @Input() cardDetails!:any;
+  @Input() cardDetails!:Shipment;
   @Input() const!:any;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.cardDetails);
+    
   }
 
 }
